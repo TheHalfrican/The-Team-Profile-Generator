@@ -63,7 +63,7 @@ function init() {
                     case "Intern":
                         return internCreate();
                     default:
-                        return generateHtml
+                        return generateHtml();
                 }
             })
     }
@@ -126,17 +126,17 @@ function init() {
             .then(({ name, id, email, school }) => {
                 const intern = new Intern(id, name, email, school)
                 teamMemberHtmlArr.push(generateInternCard(intern))
-                mainMenu()
+                mainMenu();
             });
     }
-    function generateHtml() {
+    function generateHtml () {
         fs.writeFile("./dist/index.html", baseHtml(teamMemberHtmlArr), (err) => {
             err ? console.log(err) : console.log("Generated HTML File")
         })
     }
 
 
-    managerCreate()
+    managerCreate();
 }
 
-init()
+init();
