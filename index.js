@@ -15,7 +15,7 @@ function init() {
             {
                 type: 'input',
                 name: 'name',
-                message: 'What is the Managers name?',
+                message: "What is the Manager's name?",
             },
             {
                 type: 'input',
@@ -25,7 +25,7 @@ function init() {
             {
                 type: 'input',
                 name: 'id',
-                message: 'What is the Managers id?',
+                message: "What is the Manager's id?",
             },
             {
                 type: 'input',
@@ -38,19 +38,90 @@ function init() {
                 const manager = new Manager(id, name, email, officeNumber)
                 teamMemberHtmlArr.push(generateManagerCard(manager))
                 mainMenu()
-            })
+            });
     }
     function mainMenu() {
         inquirer.prompt([
             {
                 type: 'list',
-                name: 'name',
+                name: 'addedRole',
                 message: 'Would you like to add another Employee?',
                 choices: ['Engineer', 'Intern', "No, I'm done"]
             },
         ])
+            .then(answers => {
+                switch (answers.addedRole) {
+                    case "Engineer":
+                        return engineerCreate();
+                    case "Intern":
+                        return internCreate();
+                    default:
+                        return generateHtml
+                }
+            })
     }
+    function engineerCreate() {
+        inquirer.prompt([
 
+            {
+                type: 'input',
+                name: 'name',
+                message: "What is the Engineer's name?",
+            },
+            {
+                type: 'input',
+                name: 'email',
+                message: 'Whats your email',
+            },
+            {
+                type: 'input',
+                name: 'id',
+                message: "What is the Engineer's id?",
+            },
+            {
+                type: 'input',
+                name: 'github',
+                message: 'What is your github?',
+            },
+
+        ])
+            .then(({ name, id, email, github }) => {
+                const engineer = new Engineer(id, name, email, github)
+                teamMemberHtmlArr.push(generateEngineerCard(engineer))
+                mainMenu()
+            });
+    }
+    function internCreate() {
+        inquirer.prompt([
+
+            {
+                type: 'input',
+                name: 'name',
+                message: "What is the Intern's name?",
+            },
+            {
+                type: 'input',
+                name: 'email',
+                message: 'Whats your email',
+            },
+            {
+                type: 'input',
+                name: 'id',
+                message: "What is the Intern's id?",
+            },
+            {
+                type: 'input',
+                name: 'github',
+                message: 'What is your School?',
+            },
+
+        ])
+            .then(({ name, id, email, school }) => {
+                const intern = new Intern(id, name, email, school)
+                teamMemberHtmlArr.push(generateInternCard(intern))
+                mainMenu()
+            });
+    }
 
 
     managerCreate()
