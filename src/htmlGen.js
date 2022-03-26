@@ -73,3 +73,11 @@ const baseHtml = (htmlArr) => `
 </body>
 </html>
 `
+
+
+module.export = {
+    generateEngineerCard,
+    generateInternCard,
+    generateManagerCard,
+    baseHtml
+}

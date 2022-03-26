@@ -6,6 +6,13 @@ const Manager = require("./lib/Manager")
 const Engineer = require("./lib/Engineer")
 const Intern = require("./lib/Intern")
 
+const {
+    generateEngineerCard,
+    generateInternCard,
+    generateManagerCard,
+    baseHtml
+} = require("./src/htmlGen")
+
 const teamMemberHtmlArr = [];
 
 function init() {
@@ -122,8 +129,8 @@ function init() {
                 mainMenu()
             });
     }
-    function generateHtml () {
-        fs.writeFile("index.html", baseHtml(teamMemberHtmlArr), (err) => {
+    function generateHtml() {
+        fs.writeFile("./dist/index.html", baseHtml(teamMemberHtmlArr), (err) => {
             err ? console.log(err) : console.log("Generated HTML File")
         })
     }
