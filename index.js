@@ -122,6 +122,11 @@ function init() {
                 mainMenu()
             });
     }
+    function generateHtml () {
+        fs.writeFile("index.html", baseHtml(teamMemberHtmlArr), (err) => {
+            err ? console.log(err) : console.log("Generated HTML File")
+        })
+    }
 
 
     managerCreate()
