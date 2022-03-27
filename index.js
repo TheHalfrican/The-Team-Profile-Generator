@@ -27,7 +27,7 @@ function init() {
             {
                 type: 'input',
                 name: 'email',
-                message: 'Whats your email',
+                message: "What's your email?",
             },
             {
                 type: 'input',
@@ -78,7 +78,7 @@ function init() {
             {
                 type: 'input',
                 name: 'email',
-                message: 'Whats your email',
+                message: "What's your email?",
             },
             {
                 type: 'input',
@@ -109,7 +109,7 @@ function init() {
             {
                 type: 'input',
                 name: 'email',
-                message: 'Whats your email',
+                message: "What's your email?",
             },
             {
                 type: 'input',
@@ -118,8 +118,8 @@ function init() {
             },
             {
                 type: 'input',
-                name: 'github',
-                message: 'What is your School?',
+                name: 'school',
+                message: 'What is the name your School?',
             },
 
         ])
