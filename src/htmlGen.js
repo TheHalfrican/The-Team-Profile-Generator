@@ -48,7 +48,7 @@ const generateInternCard = (intern) => {
     <p class="card-text"><i class="bi bi-mortarboard-fill"></i> ${intern.getRole()}</p>
   </div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item">Engineer id: ${intern.getId()}</li>
+    <li class="list-group-item">Intern id: ${intern.getId()}</li>
     <li class="list-group-item">Email: <a href="mailto:${intern.getEmail()}">${intern.getEmail()}</a></li>
     <li class="list-group-item">School: ${intern.getSchool()}</li>
   </ul>
