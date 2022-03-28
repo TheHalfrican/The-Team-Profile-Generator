@@ -25,6 +25,7 @@ You can test this application anytime by running the command "npm run test" in y
 
 ## Walkthrough
 
+- Wallkthrough Video: [Generator Video Guide](https://drive.google.com/file/d/1qI2ZN-csVi1tRlsToMMy5sg08Sib_4uk/view?usp=sharing)
 
 ## GitHub
 - Github Repository: [Team Profile Generator](https://github.com/TheHalfrican/The-Team-Profile-Generator)
