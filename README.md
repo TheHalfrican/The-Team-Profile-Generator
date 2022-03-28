@@ -4,7 +4,7 @@
 ## Table of Contents
 1. [Description](#Description)
 2. [Usage](#Usage)
-3. [Instructions](#Instructions)
+3. [Testing](#Testing)
 4. [Sample-Image](#Sample-Image)
 5. [Walkthrough](#Wlkthrough)
 6. [Github](#Github)
@@ -16,7 +16,7 @@ This is a high quality Team Profile Generator. It will ask you a list of qeustio
 ## Usage
 To use this application simply run it using "node index" from the command line of your terminal.
 
-## Instructions
+## Testing
 You can test this application anytime by running the command "npm run test" in your terminal.
 
 ## Sample-Image
